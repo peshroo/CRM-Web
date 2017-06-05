@@ -1,11 +1,18 @@
+<h1>Contacts</h1>
+
 <h2>
   There are <u><%=Contact.count%></u> contacts
+</h2
+
+<h2 class="mycontacts">My Contacts: <span class='number'><%= @contacts.size %>
+</span>
 </h2>
 
-
-<% @contacts.each do |contact| %>
-<p>
-  <%= contact.first_name %> <%= contact.last_name%> (<%= contact.email%>)
-    <h5>Edit | Delete</h5>
+<ul>
+  <% @contacts.each do |contact| %>
+    <p>
+      <%= contact.first_name %> <%= contact.last_name%> (<%= contact.email%>)
+      <h5>Edit | Delete</h5>
       <% end %>
-</p>
+    </p>
+</ul>
